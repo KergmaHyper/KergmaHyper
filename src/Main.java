@@ -1,3 +1,4 @@
+import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -13,7 +14,7 @@ public class Main {
         str += curdt.toString()+"\r\n";
         System.out.println(str);
         String filename1 = "F:\\java\\intellij\\fileIO\\oneout.txt";
-        try(FileOutputStream fos=new FileOutputStream(filename1,true))
+        try(BufferedOutputStream fos=new BufferedOutputStream( new FileOutputStream(filename1,true)))
         {
             byte[] buff = str.getBytes(StandardCharsets.UTF_8);
             fos.write(buff,0, buff.length);
