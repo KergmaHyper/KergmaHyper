@@ -26,7 +26,7 @@ public class Main {
           fis.read(buffr,0,fis.available());
 
           for(byte b: buffr) { System.out.print( (char)b );   }
-            System.out.print("<-----      end  file :      ----->\r\n");
+            System.out.print("<-----    end  file :     ----->\r\n");
         }
         catch (IOException ex){  System.out.println(ex.getMessage());     }
 
