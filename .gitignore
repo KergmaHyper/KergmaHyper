@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-# Default ignored files
-out/*
-/*.txt
-/.idea/
-oneout.txt
-
-
-=======
 *.class
 *.txt
 .idea/
->>>>>>> buff

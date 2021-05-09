@@ -1,7 +1,4 @@
-import java.io.BufferedOutputStream;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
@@ -22,7 +19,7 @@ public class Main {
         }
         catch (IOException ex){ System.out.println(ex.getMessage());    }
 
-        try( FileInputStream fis=new FileInputStream(filename1))
+        try( BufferedInputStream fis=new BufferedInputStream(new FileInputStream(filename1)))
         {
           System.out.printf("file %s avalable %d bytes. \r\n<-----    start  file :      ----->\r\n",filename1,fis.available());
           byte[] buffr= new byte[fis.available()];
