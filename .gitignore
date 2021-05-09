@@ -1,5 +1,5 @@
-*.class
-out/
-*.iml
-.idea/
-*.txt
+# Default ignored files
+/out/
+/*.txt
+/.idea/
+
