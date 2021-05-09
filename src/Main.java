@@ -12,7 +12,7 @@ public class Main {
         Date curdt=new Date();
         str += curdt.toString()+"\r\n";
         System.out.println(str);
-        String filename1 = "f:\\java\\oneout.txt";
+        String filename1 = "F:\\java\\intellij\\fileIO\\oneout.txt";
         try(FileOutputStream fos=new FileOutputStream(filename1,true))
         {
             byte[] buff = str.getBytes(StandardCharsets.UTF_8);
