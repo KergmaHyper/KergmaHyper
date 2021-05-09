@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Default ignored files
 out/*
 /*.txt
@@ -5,3 +6,8 @@ out/*
 oneout.txt
 
 
+=======
+*.class
+*.txt
+.idea/
+>>>>>>> buff

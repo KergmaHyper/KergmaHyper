@@ -1,3 +1,9 @@
 Hi tst msg. Sun May 09 15:14:39 EEST 2021
+<<<<<<< HEAD
 Hi tst msg. Sun May 09 15:33:44 EEST 2021
 Hi! test msg. Sun May 09 15:34:59 EEST 2021
+=======
+Hi tst msg. Sun May 09 16:06:44 EEST 2021
+>>>>>>> buff
+Hi! test msg. Sun May 09 16:21:43 EEST 2021
+Hi! test msg. Sun May 09 16:21:55 EEST 2021
