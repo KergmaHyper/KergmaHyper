@@ -1,5 +1,8 @@
 *.class
+
 *.txt
+
 .idea/
+
 *.iml
 

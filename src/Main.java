@@ -10,8 +10,10 @@ public class Main {
         Date curdt=new Date();
         str += curdt.toString()+"\r\n";
         System.out.println(str);
-        String filename1 = "oneout.txt";
-        try(BufferedOutputStream fos=new BufferedOutputStream( new FileOutputStream(filename1,true)))
+       // String filename1 = "oneout.txt";
+        File fl = new File("oneout.txt");
+        //try(BufferedOutputStream fos=new BufferedOutputStream( new FileOutputStream(filename1,true)))
+        try(BufferedOutputStream fos=new BufferedOutputStream( new FileOutputStream(fl,true)))
         {
             byte[] buff = str.getBytes(StandardCharsets.UTF_8);
             fos.write(buff,0, buff.length);
@@ -19,9 +21,11 @@ public class Main {
         }
         catch (IOException ex){ System.out.println(ex.getMessage());    }
 
-        try( BufferedInputStream fis=new BufferedInputStream(new FileInputStream(filename1)))
+        //try( BufferedInputStream fis=new BufferedInputStream(new FileInputStream(filename1)))
+        try( BufferedInputStream fis=new BufferedInputStream(new FileInputStream(fl)))
         {
-          System.out.printf("file %s avalable %d bytes. \r\n<-----    start  file :      ----->\r\n",filename1,fis.available());
+          System.out.printf("file %s avalable %d bytes. \r\n<-----    start  file :      ----->\r\n"
+                  ,fl.getCanonicalPath(),fis.available());
           byte[] buffr= new byte[fis.available()];
           fis.read(buffr,0,fis.available());
 
