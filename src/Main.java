@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String str="Hi tst msg. ";
+        String str="Hi! test msg. ";
         Date curdt=new Date();
         str += curdt.toString()+"\r\n";
         System.out.println(str);
