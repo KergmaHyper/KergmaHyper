@@ -22,7 +22,7 @@ public class Main {
         catch (IOException ex){ System.out.println(ex.getMessage());    }
 
         //try( BufferedInputStream fis=new BufferedInputStream(new FileInputStream(filename1)))
-        try( BufferedInputStream fis=new BufferedInputStream(new FileInputStream(fl)))
+        /*try( BufferedInputStream fis=new BufferedInputStream(new FileInputStream(fl)))
         {
           System.out.printf("file %s avalable %d bytes. \r\n<-----    start  file :      ----->\r\n"
                   ,fl.getCanonicalPath(),fis.available());
@@ -33,7 +33,16 @@ public class Main {
             System.out.print("<-----    end  file :     ----->\r\n");
         }
         catch (IOException ex){  System.out.println(ex.getMessage());     }
-
+*/
+        try (BufferedReader fr =new BufferedReader( new FileReader(fl))){
+            System.out.printf("file %s. \r\n<-----    start  file :      ----->\r\n"
+                    ,fl.getCanonicalPath());
+            String st;
+              while ((st = fr.readLine())!=null){
+                  System.out.println(st);
+              }
+            System.out.print("<-----    end  file :     ----->\r\n");
+        }catch (Exception ex){System.out.println(ex.getMessage());}
 
     }
 }
